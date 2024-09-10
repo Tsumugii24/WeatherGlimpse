@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">天气预报</string>
+    <string name="updated_at">最近更新时间</string>
+    <string name="enter_city_name">请输入城市名</string>
+    <string name="pressure">气压</string>
+    <string name="wind">风速</string>
+    <string name="humidity">湿度</string>
+    <string name="monday">星期一</string>
+    <string name="tuesday">星期二</string>
+    <string name="wednesday">星期三</string>
+    <string name="thursday">星期四</string>
+    <string name="friday">星期五</string>
+    <string name="saturday">星期六</string>
+    <string name="sunday">星期日</string>
+    <string name="day">日期</string>
+</resources>
