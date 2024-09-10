@@ -69,7 +69,7 @@ $ git clone https://github.com/Tsumugii24/WeatherGlimpse && cd WeatherGlimpse
 &emsp;&emsp;Open `apikey.properties.example` and paste your own `API Keys` in the **corresponding place**, then **rename** the file into `apikey.properties`
 
 
-```json
+```
 API_KEY = <your api key here>
 ```
 
