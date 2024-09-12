@@ -15,10 +15,11 @@
 
 
 <p align="center">   
-    <img src="https://github.com/Tsumugii24/WeatherGlimpse/blob/main/documents/LONDON.gif?raw=true" width="300" /> 
-    <img src="https://github.com/Tsumugii24/WeatherGlimpse/blob/main/documents/SHANGHAI.png?raw=true" width="300" />   
-    <img src="https://github.com/Tsumugii24/WeatherGlimpse/blob/main/documents/BEIJING.png?raw=true" width="300" /> 
+    <img src="https://github.com/Tsumugii24/WeatherGlimpse/blob/main/documents/LONDON.gif?raw=true" width="200" /> 
+    <img src="https://github.com/Tsumugii24/WeatherGlimpse/blob/main/documents/SHANGHAI.png?raw=true" width="200" />   
+    <img src="https://github.com/Tsumugii24/WeatherGlimpse/blob/main/documents/BEIJING.png?raw=true" width="200" /> 
 </p></div>
+
 
 
 
@@ -26,10 +27,11 @@
 <div align="center"><h2>🎉 New Features 🎉</h2></div>
 
 <p align="center">   
-    <img src="https://github.com/Tsumugii24/WeatherGlimpse/blob/main/documents/login.png?raw=true" width="300" /> 
-    <img src="https://github.com/Tsumugii24/WeatherGlimpse/blob/main/documents/management.png?raw=true" width="300" />   
-    <img src="https://github.com/Tsumugii24/WeatherGlimpse/blob/main/documents/weather_trend.png?raw=true" width="300" /> 
+    <img src="https://github.com/Tsumugii24/WeatherGlimpse/blob/main/documents/login.png?raw=true" width="200" /> 
+    <img src="https://github.com/Tsumugii24/WeatherGlimpse/blob/main/documents/management.png?raw=true" width="200" />   
+    <img src="https://github.com/Tsumugii24/WeatherGlimpse/blob/main/documents/weather_trend.png?raw=true" width="200" /> 
 </p></div>
+
 
 
 
