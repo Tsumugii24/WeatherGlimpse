@@ -42,6 +42,7 @@ import com.yui.weatherglimpse.location.LocationCord;
 import com.yui.weatherglimpse.toast.Toaster;
 import com.yui.weatherglimpse.update.UpdateUI;
 import com.yui.weatherglimpse.url.URL;
+import com.yui.weatherglimpse.utils.WeatherData;
 import com.yui.weatherglimpse.utils.WeatherDescriptionTranslator;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
@@ -53,10 +54,13 @@ import com.google.android.play.core.install.model.UpdateAvailability;
 import com.google.android.play.core.tasks.Task;
 
 import org.json.JSONException;
+import org.json.JSONObject;
 
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
 
@@ -79,8 +83,12 @@ public class HomeActivity extends AppCompatActivity {
     private int currentBackgroundIndex = 0;
     private boolean isImage1Showing = true;
 
+    private List<WeatherData> futureWeatherData;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        futureWeatherData = new ArrayList<>();
 
         Locale locale = new Locale("zh");
         Locale.setDefault(locale);
@@ -140,6 +148,8 @@ public class HomeActivity extends AppCompatActivity {
                 openGitHub(v);
             }
         });
+
+        binding.drawTrendButton.setOnClickListener(v -> drawTrend(futureWeatherData));
     }
 
     @Override
@@ -315,6 +325,7 @@ public class HomeActivity extends AppCompatActivity {
     @SuppressLint("DefaultLocale")
     private void getTodayWeatherInfo(String name) {
         URL url = new URL();
+        futureWeatherData.clear();
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url.getLink(), null, response -> {
             try {
@@ -334,9 +345,23 @@ public class HomeActivity extends AppCompatActivity {
                 wind_speed = response.getJSONArray("daily").getJSONObject(0).getString("wind_speed");
                 humidity = response.getJSONArray("daily").getJSONObject(0).getString("humidity");
 
+                for (int i = 1; i <= 6; i++) {
+                    JSONObject dayData = response.getJSONArray("daily").getJSONObject(i);
+                    WeatherData data = new WeatherData(
+                        dayData.getJSONObject("temp").getDouble("max") - 273.15,
+                        dayData.getJSONObject("temp").getDouble("min") - 273.15,
+                        dayData.getDouble("pressure"),
+                        dayData.getDouble("wind_speed"),
+                        dayData.getDouble("humidity")
+                    );
+                    futureWeatherData.add(data);
+                }
+
                 updateUI();
                 hideProgressBar();
                 setUpDaysRecyclerView();
+
+                binding.drawTrendButton.setOnClickListener(v -> drawTrend(futureWeatherData));
             } catch (JSONException e) {
                 e.printStackTrace();
             }
@@ -492,6 +517,12 @@ public class HomeActivity extends AppCompatActivity {
         String url = "https://github.com/Tsumugii24/WeatherGlimpse";
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(Uri.parse(url));
+        startActivity(intent);
+    }
+
+    private void drawTrend(List<WeatherData> weatherData) {
+        Intent intent = new Intent(this, TrendActivity.class);
+        intent.putExtra("weatherData", new ArrayList<>(weatherData));
         startActivity(intent);
     }
 }

@@ -14,5 +14,6 @@
     <color name="blockBGColor">#454B54</color>
     <color name="textColor">#EEEEEE</color>
     <color name="textHintColor">#80EEEEEE</color>   <!-- 50% -->
+    <color name="yellow">#FFEB3B</color>
 
 </resources>

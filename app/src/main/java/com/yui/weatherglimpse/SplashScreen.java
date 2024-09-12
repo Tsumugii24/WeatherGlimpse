@@ -24,10 +24,19 @@ public class SplashScreen extends AppCompatActivity {
         splashScreen();
     }
 
+    // private void splashScreen() {
+    //     int SPLASH_TIME = 4000;
+    //     new Handler().postDelayed(() -> {
+    //         Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+    //         startActivity(intent);
+    //         finish();
+    //     }, SPLASH_TIME);
+    // }
+
     private void splashScreen() {
-        int SPLASH_TIME = 4000;
+        int SPLASH_TIME = 2000;
         new Handler().postDelayed(() -> {
-            Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+            Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
             startActivity(intent);
             finish();
         }, SPLASH_TIME);
