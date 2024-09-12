@@ -2,15 +2,13 @@
 
 ![Platform](https://camo.githubusercontent.com/4a8b11f77deb25218c2e0173619a93d16a90e22fc8c4b8f04b27b51c2b57f063/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f706c6174666f726d2d416e64726f69642d627269676874677265656e2e7376673f636f6c6f723d303041444235267374796c653d666f722d7468652d6261646765)
 
-</div>
+
 
 <div align="center"><h2>Description</h2></div>
 
 &emsp;&emsp;`WeatherGlimpse` is an **Android** application designed to provide users with quick and accurate weather updates. With a clean and intuitive interface, the app delivers current conditions, forecasts, and alerts for locations around the world. Stay informed about **temperature changes, wind speeds, atmosphere pressure** and more with this handy tool at your fingertips.
 
 
-
-</div>
 
 <div align="center"><h2>Demonstration</h2></div>
 
@@ -22,9 +20,25 @@
     <img src="https://github.com/Tsumugii24/WeatherGlimpse/blob/main/documents/BEIJING.png?raw=true" width="300" /> 
 </p></div>
 
+
+
+
+<div align="center"><h2>🎉 New Features 🎉</h2></div>
+
+<p align="center">   
+    <img src="https://github.com/Tsumugii24/WeatherGlimpse/blob/main/documents/login.png?raw=true" width="300" /> 
+    <img src="https://github.com/Tsumugii24/WeatherGlimpse/blob/main/documents/management.png?raw=true" width="300" />   
+    <img src="https://github.com/Tsumugii24/WeatherGlimpse/blob/main/documents/weather_trend.png?raw=true" width="300" /> 
+</p></div>
+
+
+
+
+
 <div align="center"><h2>Todo</h2></div>
 
-- [ ] Complete the **LOGIN** Interface and UI design
+- [x] Complete the **LOGIN** Interface and UI design
+- [x] Finish the weather trend display function
 - [x] Add a gif demonstration
 - [ ] Deploy the demo on website
 
@@ -39,8 +53,7 @@
 > Remember to update the `README.md` and `requirements.txt` after each commit!
 
 - [2024-09-10] Historic Talk! 
-
-
+- [2024-09-12] New Features! 
 
 
 
@@ -82,9 +95,6 @@ API_KEY = <your api key here>
 
 
 
-
-
-</div>
 
 <div align="center"><h2>References</h2></div>
 
